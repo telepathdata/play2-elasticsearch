@@ -15,3 +15,5 @@ copyreleases.sh
 javadoc
 out
 /target/
+module/data/
+samples/elasticsearch-scala/data/
