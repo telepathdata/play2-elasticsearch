@@ -1,4 +1,3 @@
-import play.Project._
 import scala.Some
 import xerial.sbt.Sonatype.SonatypeKeys._
 import xerial.sbt.Sonatype._
@@ -14,9 +13,7 @@ libraryDependencies ++= Seq(
   "org.apache.commons" % "commons-lang3" % "3.1"
 )
 
-play.Project.playJavaSettings
-
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.1"
 
 scalacOptions += "-target:jvm-1.7"
 
