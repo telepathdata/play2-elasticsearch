@@ -330,7 +330,11 @@ object ScalaHelpers {
       val totalCount: Long = searchResponse.getHits().totalHits()
       val pageSize: Long =
         indexQuery.size.fold(searchResponse.getHits().hits().length.toLong)(_.toLong)
-      val pageCurrent: Long = indexQuery.from.fold (1L){ f => ((f / pageSize) + 1) }
+      val pageCurrent:Long = if(pageSize > 0) {
+        indexQuery.from.fold (1L){ f => ((f / pageSize) + 1) }
+      } else {
+        1
+      }
       val hits = searchResponse.getHits().asScala.toList
 
       new IndexResults[T](
