@@ -1,4 +1,3 @@
-import play.Project._
 import scala.Some
 import xerial.sbt.Sonatype.SonatypeKeys._
 import xerial.sbt.Sonatype._
